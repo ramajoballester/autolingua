@@ -87,7 +87,7 @@ def getMcell(verb_time):
         return 0
 
 def getNcell(verb_time):
-    if 'perfecto' in verb_time and 'imperfecto' not in verb_time:
+    if 'perfecto' in verb_time and 'imperfecto' not in verb_time and 'simple' not in verb_time:
         return 1
     else:
         return 0
