@@ -119,35 +119,35 @@ while verb and infinitive and not empty_cell:
     for each in pers_match:
         if type(Gcell) == type(None):
             Gcell = each
-        else:
+        elif Gcell != each:
             Gcell = str(Gcell) + '/' + str(each)
 
     Kcell = None
     for each in modes_match:
         if type(Kcell) == type(None):
             Kcell = getKcell(each)
-        else:
+        elif Kcell != getKcell(each):
             Kcell = str(Kcell) + '/' + str(getKcell(each))
 
     Lcell = None
     for each_verb_time, each_mode in zip(verb_times_match, modes_match):
         if type(Lcell) == type(None):
             Lcell = getLcell(each_mode, each_verb_time)
-        else:
+        elif Lcell != getLcell(each_mode, each_verb_time):
             Lcell = str(Lcell) + '/' + str(getLcell(each_mode, each_verb_time))
 
     Mcell = None
     for each in verb_times_match:
         if type(Mcell) == type(None):
             Mcell = getMcell(each)
-        else:
+        elif Mcell != getMcell(each):
             Mcell = str(Mcell) + '/' + str(getMcell(each))
 
     Ncell = None
     for each in verb_times_match:
         if type(Ncell) == type(None):
             Ncell = getNcell(each)
-        else:
+        elif Ncell != getNcell(each):
             Ncell = str(Ncell) + '/' + str(getNcell(each))
 
     if len(modes_match) > 1:
@@ -170,13 +170,13 @@ while verb and infinitive and not empty_cell:
 
 
 
-    sheet[chr(ord(cell_letter)+3) + cell_number].value = Gcell
-    sheet[chr(ord(cell_letter)+7) + cell_number].value = Kcell
-    sheet[chr(ord(cell_letter)+8) + cell_number].value = Lcell
-    sheet[chr(ord(cell_letter)+9) + cell_number].value = Mcell
-    sheet[chr(ord(cell_letter)+10) + cell_number].value = Ncell
-    sheet[chr(ord(cell_letter)+11) + cell_number].value = Ocell
-    sheet[chr(ord(cell_letter)+12) + cell_number].value = Pcell
+    sheet[chr(ord(cell_letter)+3) + cell_number].value = str(Gcell)
+    sheet[chr(ord(cell_letter)+7) + cell_number].value = str(Kcell)
+    sheet[chr(ord(cell_letter)+8) + cell_number].value = str(Lcell)
+    sheet[chr(ord(cell_letter)+9) + cell_number].value = str(Mcell)
+    sheet[chr(ord(cell_letter)+10) + cell_number].value = str(Ncell)
+    sheet[chr(ord(cell_letter)+11) + cell_number].value = str(Ocell)
+    sheet[chr(ord(cell_letter)+12) + cell_number].value = str(Pcell)
 
     if args.color:
         sheet[chr(ord(cell_letter)+3) + cell_number].fill = fill
