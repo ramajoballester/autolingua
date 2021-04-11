@@ -17,12 +17,6 @@ parser.add_argument('-file_name', default='PRESEEA_1995_Nivel_bajo.xlsx', help='
 parser.add_argument('-init_cell', default='D2', help='Initial cell with verb')
 args = parser.parse_args()
 
-P0 = ['pensar', 'comprender', 'opinar']
-P1 = ['ser', 'estar']
-P2 = ['decir', 'hablar']
-P3 = ['hacer', 'jugar']
-P4 = ['ir', 'venir', 'llegar']
-
 color = openpyxl.styles.colors.Color(rgb='bce4e5')
 fill = openpyxl.styles.fills.PatternFill(patternType='solid', fgColor=color)
 
@@ -93,18 +87,81 @@ def getNcell(verb_time):
         return 0
 
 
-cell_letter = args.init_cell[0]
-cell_number = args.init_cell[1:]
+
 
 workbook = openpyxl.load_workbook(filename=args.file_name)
-sheet = workbook['LINGÜÍSTICAS']
 
+
+
+
+sheet_verbs = workbook['VERBOS']
+
+cell_number = '2'
+cell_letter = 'A'
+P0 = []
+verb = sheet_verbs[cell_letter + cell_number].value
+while type(verb) != type(None):
+    P0.append(verb)
+    cell_number = chr(ord(cell_number)+1)
+    verb = sheet_verbs[cell_letter + cell_number].value
+    
+cell_letter = 'B'
+P1 = []
+verb = sheet_verbs[cell_letter + cell_number].value
+while type(verb) != type(None):
+    P1.append(verb)
+    cell_number = chr(ord(cell_number)+1)
+    verb = sheet_verbs[cell_letter + cell_number].value
+
+cell_letter = 'C'
+P2 = []
+verb = sheet_verbs[cell_letter + cell_number].value
+while type(verb) != type(None):
+    P2.append(verb)
+    cell_number = chr(ord(cell_number)+1)
+    verb = sheet_verbs[cell_letter + cell_number].value
+
+cell_letter = 'D'
+P3 = []
+verb = sheet_verbs[cell_letter + cell_number].value
+while type(verb) != type(None):
+    P3.append(verb)
+    cell_number = chr(ord(cell_number)+1)
+    verb = sheet_verbs[cell_letter + cell_number].value
+    
+cell_letter = 'E'
+P4 = []
+verb = sheet_verbs[cell_letter + cell_number].value
+while type(verb) != type(None):
+    P4.append(verb)
+    cell_number = chr(ord(cell_number)+1)
+    verb = sheet_verbs[cell_letter + cell_number].value
+
+cell_letter = 'F'
+P5 = []
+verb = sheet_verbs[cell_letter + cell_number].value
+while type(verb) != type(None):
+    P5.append(verb)
+    cell_number = chr(ord(cell_number)+1)
+    verb = sheet_verbs[cell_letter + cell_number].value
+
+cell_letter = 'G'
+P6 = []
+verb = sheet_verbs[cell_letter + cell_number].value
+while type(verb) != type(None):
+    P6.append(verb)
+    cell_number = chr(ord(cell_number)+1)
+    verb = sheet_verbs[cell_letter + cell_number].value
+
+
+cell_letter = args.init_cell[0]
+cell_number = args.init_cell[1:]
+sheet = workbook['LINGÜÍSTICAS']
 cg = Conjugator(lang='es')
 
 verb = sheet[cell_letter + cell_number].value
 infinitive = sheet[chr(ord(cell_letter)+1) + cell_number].value
 empty_cell = sheet[chr(ord(cell_letter)+2) + cell_number].value
-
 
 while verb and not empty_cell:
     if infinitive:
@@ -165,6 +222,10 @@ while verb and not empty_cell:
             Pcell = 3
         elif infinitive in P4:
             Pcell = 4
+        elif infinitive in P5:
+            Pcell = 5
+        elif infinitive in P6:
+            Pcell = 6
         else:
             Pcell = -1
 
