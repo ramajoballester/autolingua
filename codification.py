@@ -176,13 +176,14 @@ while verb and infinitive and not empty_cell:
     sheet[chr(ord(cell_letter)+11) + cell_number].value = Ocell
     sheet[chr(ord(cell_letter)+12) + cell_number].value = Pcell
 
-    sheet[chr(ord(cell_letter)+3) + cell_number].fill = fill
-    sheet[chr(ord(cell_letter)+7) + cell_number].fill = fill
-    sheet[chr(ord(cell_letter)+8) + cell_number].fill = fill
-    sheet[chr(ord(cell_letter)+9) + cell_number].fill = fill
-    sheet[chr(ord(cell_letter)+10) + cell_number].fill = fill
-    sheet[chr(ord(cell_letter)+11) + cell_number].fill = fill
-    sheet[chr(ord(cell_letter)+12) + cell_number].fill = fill
+    if args.color:
+        sheet[chr(ord(cell_letter)+3) + cell_number].fill = fill
+        sheet[chr(ord(cell_letter)+7) + cell_number].fill = fill
+        sheet[chr(ord(cell_letter)+8) + cell_number].fill = fill
+        sheet[chr(ord(cell_letter)+9) + cell_number].fill = fill
+        sheet[chr(ord(cell_letter)+10) + cell_number].fill = fill
+        sheet[chr(ord(cell_letter)+11) + cell_number].fill = fill
+        sheet[chr(ord(cell_letter)+12) + cell_number].fill = fill
 
 
 
