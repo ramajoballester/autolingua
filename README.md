@@ -10,9 +10,10 @@ To install the package, clone this repository:
 git clone https://github.com/ramajoballester/linguistic-codification.git
 ```
 
-and run the following command:
+and run the following commands:
 
 ```
+cd linguistic-codification
 sudo -H pip install -r requirements.txt
 ```
 

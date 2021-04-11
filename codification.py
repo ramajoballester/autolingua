@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from verbecc import Conjugator
 import openpyxl
 import argparse
