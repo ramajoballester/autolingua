@@ -94,64 +94,64 @@ workbook = openpyxl.load_workbook(filename=args.file_name)
 
 
 
-sheet_verbs = workbook['VERBOS']
+# sheet_verbs = workbook['VERBOS']
 
-cell_number = '2'
-cell_letter = 'A'
-P0 = []
-verb = sheet_verbs[cell_letter + cell_number].value
-while type(verb) != type(None):
-    P0.append(verb)
-    cell_number = chr(ord(cell_number)+1)
-    verb = sheet_verbs[cell_letter + cell_number].value
+# cell_number = '2'
+# cell_letter = 'A'
+# P0 = []
+# verb = sheet_verbs[cell_letter + cell_number].value
+# while type(verb) != type(None):
+#     P0.append(verb)
+#     cell_number = chr(ord(cell_number)+1)
+#     verb = sheet_verbs[cell_letter + cell_number].value
     
-cell_letter = 'B'
-P1 = []
-verb = sheet_verbs[cell_letter + cell_number].value
-while type(verb) != type(None):
-    P1.append(verb)
-    cell_number = chr(ord(cell_number)+1)
-    verb = sheet_verbs[cell_letter + cell_number].value
+# cell_letter = 'B'
+# P1 = []
+# verb = sheet_verbs[cell_letter + cell_number].value
+# while type(verb) != type(None):
+#     P1.append(verb)
+#     cell_number = chr(ord(cell_number)+1)
+#     verb = sheet_verbs[cell_letter + cell_number].value
 
-cell_letter = 'C'
-P2 = []
-verb = sheet_verbs[cell_letter + cell_number].value
-while type(verb) != type(None):
-    P2.append(verb)
-    cell_number = chr(ord(cell_number)+1)
-    verb = sheet_verbs[cell_letter + cell_number].value
+# cell_letter = 'C'
+# P2 = []
+# verb = sheet_verbs[cell_letter + cell_number].value
+# while type(verb) != type(None):
+#     P2.append(verb)
+#     cell_number = chr(ord(cell_number)+1)
+#     verb = sheet_verbs[cell_letter + cell_number].value
 
-cell_letter = 'D'
-P3 = []
-verb = sheet_verbs[cell_letter + cell_number].value
-while type(verb) != type(None):
-    P3.append(verb)
-    cell_number = chr(ord(cell_number)+1)
-    verb = sheet_verbs[cell_letter + cell_number].value
+# cell_letter = 'D'
+# P3 = []
+# verb = sheet_verbs[cell_letter + cell_number].value
+# while type(verb) != type(None):
+#     P3.append(verb)
+#     cell_number = chr(ord(cell_number)+1)
+#     verb = sheet_verbs[cell_letter + cell_number].value
     
-cell_letter = 'E'
-P4 = []
-verb = sheet_verbs[cell_letter + cell_number].value
-while type(verb) != type(None):
-    P4.append(verb)
-    cell_number = chr(ord(cell_number)+1)
-    verb = sheet_verbs[cell_letter + cell_number].value
+# cell_letter = 'E'
+# P4 = []
+# verb = sheet_verbs[cell_letter + cell_number].value
+# while type(verb) != type(None):
+#     P4.append(verb)
+#     cell_number = chr(ord(cell_number)+1)
+#     verb = sheet_verbs[cell_letter + cell_number].value
 
-cell_letter = 'F'
-P5 = []
-verb = sheet_verbs[cell_letter + cell_number].value
-while type(verb) != type(None):
-    P5.append(verb)
-    cell_number = chr(ord(cell_number)+1)
-    verb = sheet_verbs[cell_letter + cell_number].value
+# cell_letter = 'F'
+# P5 = []
+# verb = sheet_verbs[cell_letter + cell_number].value
+# while type(verb) != type(None):
+#     P5.append(verb)
+#     cell_number = chr(ord(cell_number)+1)
+#     verb = sheet_verbs[cell_letter + cell_number].value
 
-cell_letter = 'G'
-P6 = []
-verb = sheet_verbs[cell_letter + cell_number].value
-while type(verb) != type(None):
-    P6.append(verb)
-    cell_number = chr(ord(cell_number)+1)
-    verb = sheet_verbs[cell_letter + cell_number].value
+# cell_letter = 'G'
+# P6 = []
+# verb = sheet_verbs[cell_letter + cell_number].value
+# while type(verb) != type(None):
+#     P6.append(verb)
+#     cell_number = chr(ord(cell_number)+1)
+#     verb = sheet_verbs[cell_letter + cell_number].value
 
 
 cell_letter = args.init_cell[0]
@@ -212,22 +212,22 @@ while verb and not empty_cell:
         else:
             Ocell = 0
 
-        if infinitive in P0:
-            Pcell = 0
-        elif infinitive in P1:
-            Pcell = 1
-        elif infinitive in P2:
-            Pcell = 2
-        elif infinitive in P3:
-            Pcell = 3
-        elif infinitive in P4:
-            Pcell = 4
-        elif infinitive in P5:
-            Pcell = 5
-        elif infinitive in P6:
-            Pcell = 6
-        else:
-            Pcell = -1
+#         if infinitive in P0:
+#             Pcell = 0
+#         elif infinitive in P1:
+#             Pcell = 1
+#         elif infinitive in P2:
+#             Pcell = 2
+#         elif infinitive in P3:
+#             Pcell = 3
+#         elif infinitive in P4:
+#             Pcell = 4
+#         elif infinitive in P5:
+#             Pcell = 5
+#         elif infinitive in P6:
+#             Pcell = 6
+#         else:
+#             Pcell = -1
 
 
         sheet[chr(ord(cell_letter)+3) + cell_number].value = str(Gcell)
@@ -236,7 +236,7 @@ while verb and not empty_cell:
         sheet[chr(ord(cell_letter)+9) + cell_number].value = str(Mcell)
         sheet[chr(ord(cell_letter)+10) + cell_number].value = str(Ncell)
         sheet[chr(ord(cell_letter)+11) + cell_number].value = str(Ocell)
-        sheet[chr(ord(cell_letter)+12) + cell_number].value = str(Pcell)
+#         sheet[chr(ord(cell_letter)+12) + cell_number].value = str(Pcell)
 
         if args.color:
             sheet[chr(ord(cell_letter)+3) + cell_number].fill = fill
