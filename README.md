@@ -14,7 +14,7 @@ and run the following commands:
 
 ```
 cd linguistic-codification
-sudo -H pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Execution
