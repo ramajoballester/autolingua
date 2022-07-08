@@ -1,4 +1,4 @@
-# Linguistic-codification (v0.1)
+# Linguistic-codification (v0.2)
 Automated linguistic codification python package
 
 
