@@ -30,3 +30,17 @@ E.g:
 ```
 python codification.py -init_cell D446 -file_name PRESEEA_1995_Nivel_bajo.xlsx -color
 ```
+
+## Word replacement
+
+Place the repo inside the folder with excel files and run:
+
+```
+python codification2.py
+```
+
+To check program settings, run:
+
+```
+python codification2.py -h
+```
