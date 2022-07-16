@@ -1,6 +1,3 @@
 verbecc
 openpyxl
 argparse
-os
-sys
-warnings
