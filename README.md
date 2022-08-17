@@ -1,5 +1,7 @@
 # Linguistic-codification (v0.2)
-Automated linguistic codification python package
+Automated linguistic codification python package for 
+
+(paper)[https://revistas-filologicas.unam.mx/anuario-letras/index.php/al/article/view/1685]
 
 
 ## Installation
