@@ -39,6 +39,12 @@ Place the repo inside the folder with excel files and run:
 python replacement.py -fases_filename filename -input_filename filename 
 ```
 
+For sequential fase data loading:
+
+```
+python replacement.py -fases_filename filename -input_filename filename -fase2_from_file filename -fase3_from_file filename
+```
+
 To check program settings, run:
 
 ```
