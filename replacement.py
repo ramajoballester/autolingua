@@ -51,6 +51,7 @@ output_file = ['fase_2', 'fase_3', 'fase_4']
 
 f_dict = [f2, f3, f4]
 f_dict_changes = [0, 0, 0]
+n_words = [0, 0, 0]
 
 for i in range(len(from_file)):
     if from_file[i] == 'None':
@@ -68,6 +69,7 @@ for i in range(len(from_file)):
 
         for each_row in range(len(input_rows)):
             new_row = [each[1:] if each[0] == ' ' else each for each in input_rows[each_row].split(',')]
+            n_words[i] += len(new_row)
             for each_key in f_dict[i].keys():
                 for each_word in range(len(new_row)):
                     if new_row[each_word] == each_key:
@@ -94,5 +96,10 @@ for each in output_file:
 print('\n {} words have been replaced in Fase 2'.format(f_dict_changes[0]))
 print(' {} words have been replaced in Fase 3'.format(f_dict_changes[1]))
 print(' {} words have been replaced in Fase 4 \n'.format(f_dict_changes[2]))
+
+print(' {} items in Fase 2'.format(n_words[0]))
+print(' {} items in Fase 3'.format(n_words[1]))
+print(' {} items in Fase 4 \n'.format(n_words[2]))
+
 
 
