@@ -36,13 +36,13 @@ python codification.py -init_cell D446 -file_name PRESEEA_1995_Nivel_bajo.xlsx -
 Place the repo inside the folder with excel files and run:
 
 ```
-python codification2.py -fases_filename filename -input_filename filename 
+python replacement.py -fases_filename filename -input_filename filename 
 ```
 
 To check program settings, run:
 
 ```
-python codification2.py -h
+python replacement.py -h
 ```
 
 
