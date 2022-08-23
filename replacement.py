@@ -96,5 +96,3 @@ print(' {} words have been replaced in Fase 3'.format(f_dict_changes[1]))
 print(' {} words have been replaced in Fase 4 \n'.format(f_dict_changes[2]))
 
 
-
-
