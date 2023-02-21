@@ -5,3 +5,4 @@ openpyxl
 argparse
 ipykernel
 ipywidgets==7.0.0
+notebook
