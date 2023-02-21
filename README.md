@@ -1,4 +1,4 @@
-# Autolingua (v0.2)
+# Autolingua (v0.3)
 Automated linguistic codification python package used in [[1]](https://revistas-filologicas.unam.mx/anuario-letras/index.php/al/article/view/1685)
 
 
@@ -10,47 +10,11 @@ To install the package, clone this repository:
 git clone https://github.com/ramajoballester/linguistic-codification.git
 ```
 
-and run the following commands:
+From the repo directory, install in editable mode with the following command:
 
 ```
-cd linguistic-codification
-pip install -r requirements.txt
+pip install -e .
 ```
-
-## Execution
-
-Place the codification spreadsheet file in the linguistic-codification directory and run the ```codification.py``` script. For greater flexibility, it includes the following parameters:
-
-- color: color the automated cells.
-- file_name: spreadsheet filename.
-- input_cell: first cell to automate.
-
-E.g:
-
-```
-python codification.py -init_cell D446 -file_name PRESEEA_1995_Nivel_bajo.xlsx -color
-```
-
-## Word replacement
-
-Place the repo inside the folder with excel files and run:
-
-```
-python replacement.py -fases_filename filename -input_filename filename 
-```
-
-For sequential fase data loading:
-
-```
-python replacement.py -fases_filename filename -input_filename filename -fase2_from_file filename -fase3_from_file filename
-```
-
-To check program settings, run:
-
-```
-python replacement.py -h
-```
-
 
 ## References
 
