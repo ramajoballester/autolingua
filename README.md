@@ -1,6 +1,5 @@
 # Autolingua
-Automated linguistic codification python package used in [[1]](https://revistas-filologicas.unam.mx/anuario-letras/index.php/al/article/view/1685)
-
+Automated linguistic codification python package used in [[1]](https://doi.org/10.19130/iifl.adel.2022.10.2.X00S25872)
 
 ## Installation
 
