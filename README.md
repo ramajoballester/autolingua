@@ -52,3 +52,9 @@ python replacement.py -h
 # References
 
 [1] Ávila, A. M., Segura, A. (2022). Estudio de las variables predictoras de la expresión del sujeto pronominal en el corpus PRESEEA. Málaga. Nivel de instrucción bajo, Anuario de Letras. Lingüística y Filología, vol. 10, no. 2, pp.57–93. doi:10.19130/iifl.adel.2022.10.2.X00S25872
+
+# Citation
+
+If you use this repository, please cite:
+
+Ramajo-Ballester, Á. (2022). Autolingua repository, GitHub. https://github.com/ramajoballester/autolingua
