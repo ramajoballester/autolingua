@@ -1,9 +1,11 @@
 verbecc
 pandas
-numpy
+numpy==1.24.*
 openpyxl
 argparse
 ipykernel
 ipywidgets==7.0.0
-notebook
-pycaret
+matplotlib
+seaborn
+# notebook
+# pycaret
