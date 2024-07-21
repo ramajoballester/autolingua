@@ -1,0 +1,51 @@
+[build-system]
+requires = ['setuptools', 'setuptools-scm']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'autolingua'
+version = '0.3'
+authors = [
+    {name='Álvaro Ramajo-Ballester', email='aramajo@ing.uc3m.es'},
+]
+description = 'autolingua description'
+readme = 'README.md'
+# requires-python = '>=3.8,<3.10'
+requires-python = '>=3.8'
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'License :: OSI Approved :: GNU Affero General Public License v3',
+    'Natural Language :: English',
+    'Operating System :: POSIX :: Linux',
+    'Operating System :: MacOS :: MacOS X',
+    'Operating System :: Microsoft :: Windows',
+]
+
+keywords = [
+    'python',
+]
+
+
+dependencies = [
+    'verbecc',
+    'pandas',
+    'numpy',
+    'openpyxl',
+    'argparse',
+    'ipykernel',
+    'ipywidgets',
+    'matplotlib',
+    'seaborn',
+]
+
+
+[tool.setuptools.packages]
+find = {namespaces = false, exclude = ['docs']}
+
+[project.scripts]
+autolingua = "autolingua.scripts.cli:main"
