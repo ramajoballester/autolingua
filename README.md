@@ -3,51 +3,43 @@ Automated linguistic codification python package used in [[1]](https://doi.org/1
 
 ## Installation
 
-To install the package, clone this repository:
+To install the package, run the following commands:
 
-```
+```bash
 git clone https://github.com/ramajoballester/autolingua.git
-```
-
-From the repo directory, install in editable mode with the following command:
-
-```
+cd autolingua
 pip install -e .
 ```
 
+Once installed, you can run the package by typing `autolingua <command>` in the terminal from every directory. Please run `autolingua -h` to check the available commands.
+
 # Automatic variable codification
 
-Place the codification spreadsheet file in the linguistic-codification directory and run the ```codification.py``` script. For greater flexibility, it includes the following parameters:
+Automatic codification script. Run ```autolingua codification -h``` to check the program settings.
 
-- color: color the automated cells.
-- file_name: spreadsheet filename.
-- input_cell: first cell to automate.
+Run it from the directory where the input files are located.
 
-E.g:
-
+```bash
+autolingua codification -init_cell D446 -file_name PRESEEA_1995_Nivel_bajo.xlsx -color
 ```
-python codification.py -init_cell D446 -file_name PRESEEA_1995_Nivel_bajo.xlsx -color
-```
+
 
 # PULSO project automatic lemmatization
 
-Place the repo inside the folder with excel files and run:
+Automatic lemmatization replacement script. Run ```autolingua lemmatization -h``` to check the program settings.
 
-```
-python replacement.py -fases_filename filename -input_filename filename 
+Run it from the directory where the input Excel files are located.
+
+```bash
+autolingua replacement -fases_filename filename -input_filename filename 
 ```
 
 For sequential fase data loading:
 
-```
-python replacement.py -fases_filename filename -input_filename filename -fase2_from_file filename -fase3_from_file filename
+```bash
+autolingua replacement -fases_filename filename -input_filename filename -fase2_from_file filename -fase3_from_file filename
 ```
 
-To check program settings, run:
-
-```
-python replacement.py -h
-```
 
 # References
 
