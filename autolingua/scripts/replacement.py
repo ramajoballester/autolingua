@@ -1,8 +1,9 @@
-import openpyxl
 import argparse
 import os
-import sys
 import shutil
+import sys
+
+import openpyxl
 
 
 def get_column_data(sheet, column, return_none=False):
