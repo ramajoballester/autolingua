@@ -6,9 +6,7 @@ Automated linguistic codification python package used in [[1]](https://doi.org/1
 To install the package, run the following commands:
 
 ```bash
-git clone https://github.com/ramajoballester/autolingua.git
-cd autolingua
-pip install -e .
+pip install autolingua
 ```
 
 Once installed, you can run the package by typing `autolingua <command>` in the terminal from every directory. Please run `autolingua -h` to check the available commands.
