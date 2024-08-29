@@ -1,16 +1,42 @@
 import argparse
 import os
+import re
 import shutil
 import sys
 
 import openpyxl
 
 
+def strip_lines(lines):
+    """Remove empty lines and double spaces from the lines"""
+    clean_lines = []
+    # If lines is a string, create a list of one element
+    if isinstance(lines, str):
+        lines = [lines]
+        return_list = False
+    else:
+        return_list = True
+    for line in lines:
+        line = re.sub(' +', ' ', line)
+        line = line.strip()
+        if line:
+            clean_lines.append(line)
+
+    if return_list:
+        return clean_lines
+    else:
+        return clean_lines[0]
+
+
 def get_column_data(sheet, column, return_none=False):
     if return_none:
-        return [cell.value for cell in sheet[column]]
+        return [strip_lines(cell.value) for cell in sheet[column]]
     else:
-        return [cell.value for cell in sheet[column] if cell.value is not None]
+        return [
+            strip_lines(cell.value)
+            for cell in sheet[column]
+            if cell.value is not None
+        ]
 
 
 def get_dict(sheet, column1, column2, info_fase=2):
@@ -128,8 +154,9 @@ def main(args):
 
                     try:
                         new_row = ', '.join(new_row)
-                    except:
-                        print(new_row)
+                    except Exception as e:
+                        print(f'Error {e} in row {each_row}: {new_row}')
+                        # print(new_row)
 
                 else:
                     new_row = ''
